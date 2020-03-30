@@ -1,0 +1,27 @@
+{
+    "id": "bearcms/mini-theme-addon",
+    "name": "Mini Theme",
+    "description": "Minimal and simple theme to make you content pop. Its perfect for the mobile-first world we are living in. Add a logo image (or use just text) and customize the appearance using one of the many tools provided (colors, fonts, borders, etc.).",
+    "author": {
+        "name": "Bear CMS",
+        "email": "support@bearcms.com",
+        "url": "https://bearcms.com/"
+    },
+    "media": [
+        {
+            "filename": "/assets/1.jpg",
+            "width": 1416,
+            "height": 1062
+        },
+        {
+            "filename": "/assets/2.jpg",
+            "width": 1416,
+            "height": 1062
+        },
+        {
+            "filename": "/assets/3.jpg",
+            "width": 1416,
+            "height": 1062
+        }
+    ]
+}
