@@ -20,7 +20,11 @@ $separator = '"background-color":"#ccc","height":"2px","margin-top":"40px","marg
 
 $getElementsStyles = function ($prefix) use ($text, $h1, $h2, $h3, $input, $link, $button, $date, $userImage, $separator) {
     if ($prefix === 'homePageSpecialContentBlockElements' || $prefix === 'footerElements') {
+        $h1 .= ',"color":"#ffffff"';
+        $h2 .= ',"color":"#ffffff"';
+        $h3 .= ',"color":"#ffffff"';
         $text .= ',"color":"#ffffff"';
+        $link .= ',"color":"#ffffff"';
         $input .= ',"border-top":"","border-bottom":"","border-left":"","border-right":""';
         $button .= ',"border-top":"1px solid transparent","border-bottom":"1px solid transparent","border-left":"1px solid transparent","border-right":"1px solid transparent"';
         $separator .= ',"background-color":"#333"';

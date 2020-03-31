@@ -19,11 +19,6 @@ $userImage = '"width":"50px","height":"50px","margin-right":"8px","border-top-le
 $separator = '"background-color":"#634b31","height":"2px","margin-top":"40px","margin-bottom":"40px"';
 
 $getElementsStyles = function ($prefix) use ($text, $h1, $h2, $h3, $input, $link, $button, $date, $userImage, $separator) {
-    // if ($prefix === 'homePageSpecialContentBlockElements' || $prefix === 'footerElements') {
-    //     $text .= ',"color":"#ffffff"';
-    //     $input .= ',"border-top":"","border-bottom":"","border-left":"","border-right":""';
-    //     $separator .= ',"background-color":"#333"';
-    // }
     return [
         $prefix . 'HeadingLargeCSS' => '{' . $h1 . '}',
         $prefix . 'HeadingMediumCSS' => '{' . $h2 . '}',
