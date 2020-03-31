@@ -48,7 +48,7 @@ echo '</div></div>';
 
 echo '<div style="min-width:100px;"><div class="template-navigation-container">';
 echo '<nav class="template-navigation">';
-echo '<component src="bearcms-navigation-element" editable="true" id="main-navigation' . $elementsLanguageSuffix . '" source="allPages" showHomeLink="true" menuType="horizontal-down" class="template-navigation-content" selectedPath="' . (string) $app->request->path . '" /></div>';
+echo '<component src="bearcms-navigation-element" editable="true" id="main-navigation' . $elementsLanguageSuffix . '" source="allPages" menuType="horizontal-down" class="template-navigation-content" selectedPath="' . (string) $app->request->path . '" /></div>';
 echo '</nav>';
 echo '</div></div>';
 
