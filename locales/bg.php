@@ -8,7 +8,7 @@
  */
 
 return [
-    'bearcms.themes.mini.name' => 'Mini',
+    'bearcms.themes.mini.name' => 'Мини',
     'bearcms.themes.mini.description' => 'Минималистичен и изчистен дизайн, които дава възможност на вашето съдържание да изпъкне. Той е перфектен за мобилния свят, в който живеем. Дава възможност за добавяне на лого (или използване на текст) и предоставя инструменти за настройки на цветове, шрифтове, рамки и т.н.',
     'bearcms.themes.mini.options.Header' => 'Хедър',
     'bearcms.themes.mini.options.Logo' => 'Лого',
