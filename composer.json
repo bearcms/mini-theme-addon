@@ -1,7 +1,11 @@
 {
     "name": "bearcms/mini-theme-addon",
     "description": "Mini Theme for Bear CMS",
-    "keywords": ["mini", "theme", "Bear CMS"],
+    "keywords": [
+        "mini",
+        "theme",
+        "Bear CMS"
+    ],
     "homepage": "https://github.com/bearcms/mini-theme-addon",
     "license": "MIT",
     "authors": [
@@ -14,10 +18,12 @@
     "require": {
         "php": ">=7.1",
         "bearcms/bearframework-addon": "^1.9",
-        "bearframework/localization-addon": "0.2.*",
-        "bearframework/html-template": "0.2.*"
+        "bearframework/localization-addon": "1.*",
+        "bearframework/html-template": "1.*"
     },
     "autoload": {
-        "files": ["autoload.php"]
+        "files": [
+            "autoload.php"
+        ]
     }
 }
