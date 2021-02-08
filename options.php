@@ -49,7 +49,7 @@ $headerLogoContainerGroup
         ]
     ]);
 
-$navigationGroup = $options->addGroup(__("bearcms.themes.mini.options.Navigation"));
+$navigationGroup = $headerGroup->addGroup(__("bearcms.themes.mini.options.Navigation"));
 $navigationGroup
     ->addOption("navigationCSS", "css", "", [
         "cssTypes" => ["cssPadding", "cssMargin", "cssBorder", "cssRadius", "cssShadow", "cssBackground", "cssSize", "cssTextAlign"],
