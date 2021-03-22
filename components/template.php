@@ -58,7 +58,7 @@ echo '</div>';
 if ($isHomePage && $homePageSpecialContentBlockVisibility) {
     echo '<div class="template-homepage-special-content-block-container">';
     echo '<section class="template-homepage-special-content-block">';
-    echo '<component src="bearcms-elements" editable="true" class="homepage-special-bearcms-elements" id="homepage-special' . $elementsLanguageSuffix . '"/>';
+    echo '<component src="bearcms-elements" editable="true" canStyle="true" class="homepage-special-bearcms-elements" id="homepage-special' . $elementsLanguageSuffix . '"/>';
     echo '</section>';
     echo '</div>';
 }
@@ -72,7 +72,7 @@ echo '</div>';
 if ($footerVisibility) {
     echo '<div class="template-footer-container">';
     echo '<footer class="template-footer">';
-    echo '<component src="bearcms-elements" editable="true" class="footer-bearcms-elements" id="footer' . $elementsLanguageSuffix . '"/>';
+    echo '<component src="bearcms-elements" editable="true" canStyle="true" class="footer-bearcms-elements" id="footer' . $elementsLanguageSuffix . '"/>';
     echo '</footer>';
     echo '</div>';
 }
