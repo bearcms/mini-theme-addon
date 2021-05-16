@@ -251,7 +251,7 @@ $windowGroup
     ->addOption("bodyCSS", "css", "", [
         "cssTypes" => ["cssPadding", "cssBorder", "cssRadius", "cssShadow", "cssBackground"],
         "cssOutput" => [
-            ["selector", "body"]
+            ["selector", ".template-body"]
         ]
     ]);
 

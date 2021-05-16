@@ -32,7 +32,7 @@ echo '<style>';
 echo 'html,body{padding:0;margin:0;min-height:100%;}*{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}';
 echo '</style>';
 echo '</head>';
-echo '<body>';
+echo '<body class="template-body">';
 
 echo '<div class="template-header-container">';
 echo '<header class="template-header" style="display:flex;flex-direction:row;">';
