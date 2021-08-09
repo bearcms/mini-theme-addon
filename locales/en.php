@@ -18,6 +18,8 @@ return [
     'bearcms.themes.mini.options.Navigation' => 'Navigation',
     'bearcms.themes.mini.options.Item' => 'Item',
     'bearcms.themes.mini.options.MoreItem' => 'More item',
+    'bearcms.themes.mini.options.SearchButton' => 'Search button',
+    'bearcms.themes.mini.options.StoreCartButton' => 'Store\'s cart button',
     'bearcms.themes.mini.options.Subitem' => 'Subitem',
     'bearcms.themes.mini.options.FirstSubitem' => 'First subitem',
     'bearcms.themes.mini.options.LastSubitem' => 'Last subitem',

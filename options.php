@@ -71,6 +71,26 @@ $navigationItemGroup
             ["selector", ".template-navigation .template-navigation-content > .bearcms-navigation-element-item > a"]
         ]
     ]);
+$navigationItemSearchButtonGroup = $navigationItemGroup->addGroup(__("bearcms.themes.mini.options.SearchButton"));
+$navigationItemSearchButtonGroup
+    ->addOption("navigationSearchButtonCSS", "css", "", [
+        "cssTypes" => ["cssPadding", "cssText", "cssTextShadow", "cssBorder", "cssRadius", "cssShadow", "cssBackground", "cssSize"],
+        "cssOutput" => [
+            ["rule", ".template-navigation .bearcms-navigation-element-item.bearcms-navigation-element-item-search > a", "cursor:pointer;"],
+            ["selector", ".template-navigation .bearcms-navigation-element-item.bearcms-navigation-element-item-search > a"]
+        ],
+        "value" => '{"background-image":"url(addon:bearcms\/mini-theme-addon:assets\/ms.svg)","background-position":"center center","background-repeat":"no-repeat","background-size":"22px 22px"}'
+    ]);
+$navigationItemMoreStoreCartButton = $navigationItemGroup->addGroup(__("bearcms.themes.mini.options.StoreCartButton"));
+$navigationItemMoreStoreCartButton
+    ->addOption("navigationStoreCartButtonCSS", "css", "", [
+        "cssTypes" => ["cssPadding", "cssText", "cssTextShadow", "cssBorder", "cssRadius", "cssShadow", "cssBackground", "cssSize"],
+        "cssOutput" => [
+            ["rule", ".template-navigation .bearcms-navigation-element-item.bearcms-navigation-element-item-store-cart > a", "cursor:pointer;"],
+            ["selector", ".template-navigation .bearcms-navigation-element-item.bearcms-navigation-element-item-store-cart > a"]
+        ],
+        "value" => '{"background-image":"url(addon:bearcms\/mini-theme-addon:assets\/mc.svg)","background-position":"center center","background-repeat":"no-repeat","background-size":"22px 22px"}'
+    ]);
 $navigationItemMoreItemGroup = $navigationItemGroup->addGroup(__("bearcms.themes.mini.options.MoreItem"));
 $navigationItemMoreItemGroup
     ->addOption("navigationMoreItemCSS", "css", "", [

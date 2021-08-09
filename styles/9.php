@@ -41,7 +41,7 @@ $getElementsStyles = function ($prefix) use ($text, $h1, $h2, $h3, $input, $link
         $prefix . 'CommentsShowMoreButtonCSS' => '{' . $link . ',"margin-bottom":"5px"}',
         $prefix . 'HtmlCSS' => '{' . $text . '}',
         $prefix . 'HtmlLinkCSS' => '{' . $link . '}',
-        $prefix . 'BlogPostsPostTitleCSS' => '{' . $link . ',"font-family":"Arial","font-size":"22px"}',
+        $prefix . 'BlogPostsPostTitleCSS' => '{' . $link . ',"font-size":"22px"}',
         $prefix . 'BlogPostsPostDateContainerCSS' => '{' . $date . ',"margin-top":"5px"}',
         $prefix . 'BlogPostsPostDateCSS' => '{' . $date . '}',
         $prefix . 'BlogPostsPostContentCSS' => '{"margin-top":"7px"}',
@@ -56,6 +56,12 @@ $getElementsStyles = function ($prefix) use ($text, $h1, $h2, $h3, $input, $link
         $prefix . 'SeparatorSmallCSS' => '{' . $separator . ',"width":"40%"}',
         $prefix . 'SearchBoxInputCSS' => '{' . $input . '}',
         $prefix . 'SearchBoxButtonCSS' => '{' . $button . ',"width":"42px","height":"100%","background-image":"url(addon:bearcms\/mini-theme-addon:assets\/s9/s.png)","background-position":"center center","background-repeat":"no-repeat","background-attachment":"scroll","background-size":"60% 60%","border-top-left-radius":"0","border-bottom-left-radius":"0"}',
+        $prefix . 'StoreItemsItemNameCSS' => '{' . $link . ',"font-size":"22px"}',
+        $prefix . 'StoreItemsItemDescriptionCSS' => '{' . $text . '}',
+        $prefix . 'StoreItemsItemDescriptionContainerCSS' => '{"padding-top":"5px"}',
+        $prefix . 'StoreItemsItemPriceCSS' => '{' . $text . '}',
+        $prefix . 'StoreItemsItemPriceOriginalCSS' => '{' . $text . ',"text-decoration":"line-through","font-size":"12px"}',
+        $prefix . 'StoreItemsItemPriceContainerCSS' => '{"padding-top":"5px"}',
     ];
 };
 
@@ -65,9 +71,11 @@ $result = [
     'headerLogoTextCSS' => '{"font-family":"googlefonts:Caveat","font-weight":"bold","font-size":"25px","color":"#000000","margin-top":"7px"}',
     'headerLogoContainerCSS' => '{"padding-right":"20px"}',
     'headerContainerCSS' => '{}',
-    'navigationCSS' => '{"max-width":"50px"}',
+    'navigationCSS' => '{"max-width":"150px"}',
     'navigationItemCSS' => '{"line-height":"43px","padding-left":"15px","padding-right":"15px","height":"44px","min-width":"44px","color":"#111111","text-decoration":"none","font-family":"Arial","font-size":"13px","text-align":"left","margin-left":"5px","border-top-left-radius":"6px","border-top-right-radius":"6px","border-bottom-left-radius":"6px","border-bottom-right-radius":"6px","border-top":"2px solid rgba(0,0,0,0)","border-left":"2px solid rgba(0,0,0,0)","border-right":"2px solid rgba(0,0,0,0)","border-bottom":"2px solid rgba(0,0,0,0)","border-top":"2px solid #222222","border-left":"2px solid #222222","border-right":"2px solid #222222","border-bottom":"2px solid #222222"}',
     'navigationMoreItemCSS' => '{"background-image":"url(addon:bearcms\/mini-theme-addon:assets\/s9/m.png)","background-position":"center center","background-repeat":"no-repeat","background-attachment":"scroll","background-size":"60% 60%"}',
+    'navigationSearchButtonCSS' => '{"background-image":"url(addon:bearcms\/mini-theme-addon:assets\/s9/ms.svg)","background-position":"center center","background-repeat":"no-repeat","background-size":"22px 22px"}',
+    'navigationStoreCartButtonCSS' => '{"background-image":"url(addon:bearcms\/mini-theme-addon:assets\/s9/mc.svg)","background-position":"center center","background-repeat":"no-repeat","background-size":"22px 22px"}',
     'navigationSubitemCSS' => '{"line-height":"42px","padding-left":"15px","padding-right":"15px","height":"42px","color":"#ffffff","text-decoration":"none","font-family":"Arial","font-size":"13px","background-color":"#01738e","background-color:hover":"#00657d","background-color:active":"#00596e","text-align":"left"}',
     'navigationFirstSubitemCSS' => '{"border-top-left-radius":"6px","border-top-right-radius":"6px"}',
     'navigationLastSubitemCSS' => '{"border-bottom-left-radius":"6px","border-bottom-right-radius":"6px"}',
@@ -104,6 +112,12 @@ $result = [
     'forumPostPageReplyTextLinksCSS' => '{' . $link . '}',
     'forumPostPageTextInputCSS' => '{' . $input . ',"height":"200px"}',
     'forumPostPageSendButtonCSS' => '{' . $button . ',"margin-top":"10px"}',
+    'storeItemPageNameCSS' => '{' . $h1 . '}',
+    'storeItemPagePriceCSS' => '{' . $text . '}',
+    'storeItemPagePriceOriginalCSS' => '{' . $text . ',"text-decoration":"line-through","font-size":"12px"}',
+    'storeItemPagePriceContainerCSS' => '{"padding-top":"7px"}',
+    'storeItemPageBuyButtonCSS' => '{' . $button . '}',
+    'storeItemPageDescriptionCSS' => '{' . $text . '}'
 ];
 $result = array_merge($result, $getElementsStyles('homePageSpecialContentBlockElements'));
 $result = array_merge($result, $getElementsStyles('contentElements'));

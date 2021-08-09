@@ -18,6 +18,8 @@ return [
     'bearcms.themes.mini.options.Navigation' => 'Навигация',
     'bearcms.themes.mini.options.Item' => 'Елемент',
     'bearcms.themes.mini.options.MoreItem' => 'Елемент за повече',
+    'bearcms.themes.mini.options.SearchButton' => 'Бутон за търсене',
+    'bearcms.themes.mini.options.StoreCartButton' => 'Бутон за поръчка',
     'bearcms.themes.mini.options.Subitem' => 'Поделемент',
     'bearcms.themes.mini.options.FirstSubitem' => 'Първи поделемент',
     'bearcms.themes.mini.options.LastSubitem' => 'Последен поделемент',
