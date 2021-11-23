@@ -21,7 +21,7 @@ if (isset($languages[0]) && $languages[0] !== $language) {
 
 $isHomePage = (string) $app->request->path === $homePath;
 
-$headerLogoImage = $customizations->getValue('headerLogoImage');
+$headerLogoImage = (string)$customizations->getValue('headerLogoImage');
 $homePageSpecialContentBlockVisibility = $customizations->getValue('homePageSpecialContentBlockVisibility');
 $footerVisibility = $customizations->getValue('footerVisibility');
 
@@ -38,8 +38,9 @@ echo '<div class="template-header-container">';
 echo '<header class="template-header" style="display:flex;flex-direction:row;">';
 
 echo '<div style="max-width:calc(100% - 100px);"><div class="template-header-logo-container">';
-if (!empty($headerLogoImage)) {
-    echo '<component src="bearcms-image-element" class="template-header-logo-image" onClick="' . ($isHomePage ? 'none' : 'openUrl') . '" url="' . htmlentities($app->urls->get($homePath)) . '" filename="' . htmlentities($headerLogoImage) . '"/>';
+if (isset($headerLogoImage[0])) {
+    $headerLogoImageDetails = $customizations->getAssetDetails($headerLogoImage, ['filename', 'width', 'height']);
+    echo '<component src="bearcms-image-element" class="template-header-logo-image" onClick="' . ($isHomePage ? 'none' : 'openUrl') . '" url="' . htmlentities($app->urls->get($homePath)) . '" filename="' . htmlentities($headerLogoImageDetails['filename']) . '" fileWidth="' . htmlentities($headerLogoImageDetails['width']) . '" fileHeight="' . htmlentities($headerLogoImageDetails['height']) . '"/>';
 } else {
     $tagName = $isHomePage ? 'span' : 'a';
     echo '<' . $tagName . ' class="template-header-logo-text"' . ($isHomePage ? '' : ' href="' . htmlentities($app->urls->get($homePath)) . '"') . '>' . htmlspecialchars($settings->getTitle((string) $language)) . '</' . $tagName . '>';
