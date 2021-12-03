@@ -21,6 +21,9 @@
         "bearframework/localization-addon": "1.*",
         "bearframework/html-template": "1.*"
     },
+    "require-dev": {
+        "bearcms/addon-tests": "1.*"
+    },
     "autoload": {
         "files": [
             "autoload.php"
