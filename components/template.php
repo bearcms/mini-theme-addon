@@ -22,8 +22,8 @@ if (isset($languages[0]) && $languages[0] !== $language) {
 $isHomePage = (string) $app->request->path === $homePath;
 
 $headerLogoImage = (string)$customizations->getValue('headerLogoImage');
-$homePageSpecialContentBlockVisibility = $customizations->getValue('homePageSpecialContentBlockVisibility');
-$footerVisibility = $customizations->getValue('footerVisibility');
+$homePageSpecialContentBlockVisibility = (int)$customizations->getValue('homePageSpecialContentBlockVisibility');
+$footerVisibility = (int)$customizations->getValue('footerVisibility');
 
 echo '<html>';
 echo '<head>';
