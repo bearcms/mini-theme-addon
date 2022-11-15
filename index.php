@@ -24,9 +24,10 @@ $app->bearCMS->themes
             });
 
         $context->assets
-            ->addDir('assets');
+            ->addDir('assets')
+            ->addDir('values/files');
 
-        $theme->version = '1.7';
+        $theme->version = '1.8';
 
         $theme->canStyleElements = true;
         $theme->useDefaultElementsCombinations = true;
@@ -77,8 +78,8 @@ $app->bearCMS->themes
         $theme->options = function () use ($app, $context, $theme) {
             $options = $theme->makeOptions(); // used inside
             require $context->dir . '/options.php';
-            $styles = call_user_func($theme->styles);
-            $options->setValues($styles[0]->values);
+            $values = json_decode(file_get_contents($context->dir . '/values/values.json'), true);
+            $options->setValues($values);
             if ($app->bearCMS->hasEventListeners('internalBearCMSMiniThemeOptions')) {
                 $eventDetails = new stdClass();
                 $eventDetails->options = $options;
@@ -86,29 +87,6 @@ $app->bearCMS->themes
                 $options = $eventDetails->options;
             }
             return $options;
-        };
-
-        $theme->styles = function () use ($app, $context, $theme) {
-            $styles = [];
-            for ($i = 1; $i <= 9; $i++) {
-                $style = $theme->makeStyle();
-                $style->media = [
-                    [
-                        'filename' => $context->dir . '/assets/' . $i . '.jpg',
-                        'width' => 1416,
-                        'height' => 1062,
-                    ]
-                ];
-                $style->values = require $context->dir . '/styles/' . $i . '.php';
-                $styles[] = $style;
-            }
-            if ($app->bearCMS->hasEventListeners('internalBearCMSMiniThemeStyles')) {
-                $eventDetails = new stdClass();
-                $eventDetails->styles = $styles;
-                $app->bearCMS->dispatchEvent('internalBearCMSMiniThemeStyles', $eventDetails);
-                $styles = $eventDetails->styles;
-            }
-            return $styles;
         };
 
         if ($app->bearCMS->hasEventListeners('internalBearCMSMiniThemeRegister')) {
