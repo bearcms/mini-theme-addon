@@ -79,7 +79,7 @@ $app->bearCMS->themes
             $options = $theme->makeOptions(); // used inside
             require $context->dir . '/options.php';
             $values = json_decode(file_get_contents($context->dir . '/values/values.json'), true);
-            $options->setValues($values);
+            $options->setValues($values, true);
             if ($app->bearCMS->hasEventListeners('internalBearCMSMiniThemeOptions')) {
                 $eventDetails = new stdClass();
                 $eventDetails->options = $options;
