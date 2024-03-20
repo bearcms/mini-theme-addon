@@ -40,7 +40,7 @@ echo '<header class="template-header" style="display:flex;flex-direction:row;">'
 echo '<div style="max-width:calc(100% - 100px);"><div class="template-header-logo-container">';
 if (isset($headerLogoImage[0])) {
     $headerLogoImageDetails = $customizations->getAssetDetails($headerLogoImage, ['filename', 'width', 'height']);
-    echo '<component src="bearcms-image-element" class="template-header-logo-image" onClick="' . ($isHomePage ? 'none' : 'openUrl') . '" url="' . htmlentities($app->urls->get($homePath)) . '" filename="' . htmlentities($headerLogoImageDetails['filename']) . '" fileWidth="' . htmlentities($headerLogoImageDetails['width']) . '" fileHeight="' . htmlentities($headerLogoImageDetails['height']) . '"/>';
+    echo '<component src="bearcms-image-element" class="template-header-logo-image" onClick="' . ($isHomePage ? 'none' : 'openUrl') . '" url="' . htmlentities($app->urls->get($homePath)) . '" filename="' . htmlentities((string)$headerLogoImageDetails['filename']) . '" fileWidth="' . htmlentities((string)$headerLogoImageDetails['width']) . '" fileHeight="' . htmlentities((string)$headerLogoImageDetails['height']) . '"/>';
 } else {
     $tagName = $isHomePage ? 'span' : 'a';
     echo '<' . $tagName . ' class="template-header-logo-text"' . ($isHomePage ? '' : ' href="' . htmlentities($app->urls->get($homePath)) . '"') . '>' . htmlspecialchars($settings->getTitle((string) $language)) . '</' . $tagName . '>';
