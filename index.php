@@ -12,7 +12,7 @@ use BearFramework\App;
 $app = App::get();
 
 $app->bearCMS->themes
-    ->register('bearcms/mini', function (\BearCMS\Themes\Theme $theme) use ($app) {
+    ->register('bearcms/mini', function (\BearCMS\Themes\Theme $theme) use ($app): void {
         $context = $app->contexts->get(__DIR__);
 
         $app->localization
@@ -72,7 +72,7 @@ $app->bearCMS->themes
             return $manifest;
         };
 
-        $updateValues = function (array $values = null) {
+        $updateValues = function (?array $values = null) {
             // Get old assets from the CMS server
             $oldAssets = array(
                 'addon:bearcms/mini-theme-addon:assets/s9/b.jpg' => 'addon:bearcms/bearframework-addon:assets/s/otsa/t/mini/assets/s9/b.jpg',
