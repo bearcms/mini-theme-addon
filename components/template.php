@@ -49,7 +49,7 @@ echo '</div></div>';
 
 echo '<div style="min-width:100px;"><div class="template-navigation-container">';
 echo '<nav class="template-navigation">';
-echo '<component src="bearcms-navigation-element" editable="true" id="main-navigation' . $elementsLanguageSuffix . '" source="allPages" menuType="horizontal-down" class="template-navigation-content" selectedPath="' . (string) $app->request->path . '" allowSearchButtonOption="true" allowStoreCartButtonOption="true"/></div>';
+echo '<component src="bearcms-navigation-element" editable="true" id="main-navigation' . htmlentities($elementsLanguageSuffix) . '" source="allPages" menuType="horizontal-down" class="template-navigation-content" selectedPath="' . htmlentities((string) $app->request->path) . '" allowSearchButtonOption="true" allowStoreCartButtonOption="true"/></div>';
 echo '</nav>';
 echo '</div></div>';
 
@@ -59,7 +59,7 @@ echo '</div>';
 if ($isHomePage && $homePageSpecialContentBlockVisibility) {
     echo '<div class="template-homepage-special-content-block-container">';
     echo '<section class="template-homepage-special-content-block">';
-    echo '<component src="bearcms-elements" editable="true" class="homepage-special-bearcms-elements" id="homepage-special' . $elementsLanguageSuffix . '"/>';
+    echo '<component src="bearcms-elements" editable="true" class="homepage-special-bearcms-elements" id="homepage-special' . htmlentities($elementsLanguageSuffix) . '"/>';
     echo '</section>';
     echo '</div>';
 }
@@ -73,7 +73,7 @@ echo '</div>';
 if ($footerVisibility) {
     echo '<div class="template-footer-container">';
     echo '<footer class="template-footer">';
-    echo '<component src="bearcms-elements" editable="true" class="footer-bearcms-elements" id="footer' . $elementsLanguageSuffix . '"/>';
+    echo '<component src="bearcms-elements" editable="true" class="footer-bearcms-elements" id="footer' . htmlentities($elementsLanguageSuffix) . '"/>';
     echo '</footer>';
     echo '</div>';
 }
